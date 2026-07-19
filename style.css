@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Share Tech Mono', monospace;
+}
+
+body{
+    background:#050505;
+    overflow:hidden;
+    color:#00ffff;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(rgba(0,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,.05) 1px, transparent 1px);
+    background-size:40px 40px;
+    animation:grid 6s linear infinite;
+}
+
+@keyframes grid{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(40px);
+    }
+}
+
+.terminal{
+    width:700px;
+    max-width:90%;
+    margin:80px auto;
+    border:2px solid cyan;
+    padding:40px;
+    box-shadow:0 0 30px cyan;
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(5px);
+}
+
+.glitch{
+    font-size:70px;
+    text-align:center;
+    color:#00ffff;
+    position:relative;
+    text-shadow:
+    0 0 5px cyan,
+    0 0 20px cyan;
+    animation:flicker .15s infinite alternate;
+}
+
+@keyframes flicker{
+    from{
+        opacity:.95;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.status{
+    margin-top:30px;
+    font-size:22px;
+    color:#00ff88;
+}
+
+.box{
+    margin-top:20px;
+    border:1px solid cyan;
+    padding:20px;
+    line-height:2;
+}
+
+button{
+    margin-top:30px;
+    width:100%;
+    padding:15px;
+    background:transparent;
+    border:2px solid cyan;
+    color:cyan;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:cyan;
+    color:black;
+    box-shadow:0 0 25px cyan;
+}
